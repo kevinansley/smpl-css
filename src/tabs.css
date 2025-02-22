@@ -1,0 +1,57 @@
+.tabs {
+    min-width: 100%;
+    overflow-x: auto;
+    display: flex;
+    position: relative;
+    box-shadow: inset 0 calc(var(--tab-border-width) * -1) 0 0 var(--tab-border-color);
+
+    &.center {
+        justify-content: center;
+    }
+
+    &>label {
+        --ripple-color: var(--element-primary);
+        border-top-left-radius: var(--tab-radius);
+        border-top-right-radius: var(--tab-radius);
+        padding: var(--tab-padding-y) var(--tab-padding-x);
+        cursor: pointer;
+        border-bottom: var(--tab-border-width) solid transparent;
+        user-select: none;
+        transition: 0.25s;
+
+        &:hover {
+            background-color: var(--bg-hover);
+        }
+
+        &:has(input:checked) {
+            border-bottom-color: var(--border-interactive);
+            anchor-name: --selected-tab;
+        }
+    }
+
+    &>input,
+    &>label>input {
+        position: fixed;
+        left: -9999px;
+    }
+
+    @supports(position-anchor:--selected-tab) {
+
+        &>input:checked+label,
+        label:has(input:checked) {
+            border-bottom-width: 0;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            position-anchor: --selected-tab;
+            bottom: 0;
+            left: anchor(left);
+            right: anchor(right);
+            height: var(--tab-border-width);
+            background-color: var(--border-interactive);
+            transition: all 0.3s;
+        }
+    }
+}

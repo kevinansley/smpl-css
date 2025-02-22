@@ -1,0 +1,33 @@
+/** Ripple effect */
+
+button,
+.btn,
+.fab,
+.tabs label,
+.ripple {
+    --ripple-y: 0;
+    --ripple-x: 45%;
+    --ripple-color: #fff;
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+        position: absolute;
+        content: "";
+        top: var(--ripple-y);
+        left: var(--ripple-x);
+        width: 10%;
+        height: 100%;
+        pointer-events: none;
+        background-image: radial-gradient(circle, var(--ripple-color) 10%, transparent 11%);
+        transform: scale(100, 100);
+        opacity: 0;
+        transition: var(--transition-ripple);
+    }
+
+    &:active::after {
+        transform: scale(0, 0);
+        opacity: 0.3;
+        transition: 0s;
+    }
+}

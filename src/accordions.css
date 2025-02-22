@@ -1,0 +1,55 @@
+.accordions {
+    width: 100%;
+    interpolate-size: allow-keywords;
+
+    details {
+        cursor: pointer;
+        position: relative;
+        width: 100%;
+        display: block;
+        padding: var(--section-padding-y) var(--section-padding-x);
+        overflow: hidden;
+    }
+
+    details[open]::details-content {
+        block-size: auto;
+    }
+
+    details::details-content {
+        block-size: 0;
+        transition:
+            block-size 0.2s,
+            content-visibility 1s;
+        transition-behavior: allow-discrete;
+    }
+
+    summary+div {
+        padding: 20px;
+    }
+
+    summary::marker,
+    summary::-webkit-details-marker {
+        content: '';
+        display: none;
+    }
+
+    summary::after {
+        content: "\2303";
+        position: absolute;
+        margin: var(--section-padding-y);
+        top: 0;
+        right: 0;
+        display: inline-block;
+        transform: rotate(-180deg);
+        transition: all 0.15s;
+    }
+
+    details[open]>summary::after {
+        top: 0.25em;
+        transform: rotate(0);
+    }
+
+    details.no-content>summary::after {
+        opacity: 0;
+    }
+}

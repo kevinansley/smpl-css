@@ -1,0 +1,8 @@
+.chip {
+    font-size: 0.8em;
+    display: inline-block;
+    border: 1px solid var(--border-primary);
+    padding: var(--chip-padding-y) var(--chip-padding-x);
+    border-radius: var(--chip-radius);
+    user-select: none;
+}

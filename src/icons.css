@@ -1,0 +1,31 @@
+/** Icons require an icon font to be registered **/
+
+[data-icon]::before {
+    display: inline-block;
+    position: relative;
+    top: 0.15em;
+    width: 1em;
+    font-size: 1.25em;
+    font-family: var(--icon-font);
+    font-weight: 400;
+    color: var(--icon);
+    content: attr(data-icon);
+    -webkit-font-feature-settings: 'liga';
+    font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+}
+
+[data-icon-after]::after {
+    display: inline-block;
+    position: relative;
+    top: 0.15em;
+    width: 1em;
+    font-size: 1.25em;
+    font-family: var(--icon-font);
+    font-weight: 400;
+    color: var(--icon);
+    content: attr(data-icon-after);
+    -webkit-font-feature-settings: 'liga';
+    font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+}

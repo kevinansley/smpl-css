@@ -1,0 +1,50 @@
+body {
+    background: var(--bg-main);
+    margin: 0;
+    padding: 0;
+}
+
+.appbar,
+.card,
+.paper {
+    background: var(--bg-surface);
+    padding: var(--section-padding-y) var(--section-padding-x);
+    border: var(--section-border) solid var(--border-primary);
+    border-radius: var(--section-radius);
+    box-shadow: var(--paper-shadow);
+    margin-bottom: var(--paper-margin-bottom);
+}
+
+.border {
+    border: 1px solid var(--border-primary);
+}
+
+.corner {
+    border-radius: var(--section-radius);
+}
+
+.divider {
+    border-bottom: 1px solid var(--border-primary);
+}
+
+.appbar {
+    position: sticky;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 0;
+    top: 0;
+
+    &.floating {
+        border-radius: var(--section-radius);
+        margin: var(--appbar-floating-margin-y) var(--appbar-floating-margin-x);
+        top: var(--appbar-floating-margin-y);
+
+        &.mobile {
+            top: 0;
+            margin: 0;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+        }
+    }
+}

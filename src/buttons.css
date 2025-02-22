@@ -1,0 +1,57 @@
+button,
+.btn,
+.fab {
+    font-size: 1rem;
+    color: var(--text-contrast);
+    padding: 1rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border: 0;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    transition: all 0.35s;
+    border-radius: var(--element-radius);
+    background-color: var(--element-primary);
+
+    &:hover {
+        background-color: var(--element-hover);
+        box-shadow: var(--element-shadow);
+        cursor: pointer;
+    }
+}
+
+button.outlined,
+.btn.outlined,
+.fab.outlined {
+    background-color: transparent;
+    color: var(--element-primary);
+    --ripple-color: var(--element-primary);
+
+    &:hover {
+        background-color: var(--element-highlight);
+    }
+}
+
+button.icon,
+button.icon:hover {
+    background-color: transparent;
+    color: var(--element-primary);
+    box-shadow: none;
+    border: 0;
+    min-width: 2rem;
+    min-height: 2rem;
+    padding: var(--padding-sm);
+    border-radius: 50rem;
+    --ripple-color: var(--element-primary)
+}
+
+.fab {
+    border-radius: var(--fab-border-radius);
+    min-width: calc(var(--fab-padding-x) * 3);
+    min-height: calc(var(--fab-padding-y) * 3);
+    padding: var(--fab-padding-y) var(--fab-padding-x);
+}
