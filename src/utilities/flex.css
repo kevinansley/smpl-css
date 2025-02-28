@@ -1,0 +1,82 @@
+/** Flex Utility Classes **/
+.flex {
+    display: flex;
+
+    &.col {
+        flex-direction: column;
+
+        &.rev {
+            flex-direction: column-reverse;
+        }
+    }
+
+    &.row {
+        flex-direction: row;
+
+        &.rev {
+            flex-direction: row-reverse;
+        }
+    }
+
+    &.items-center {
+        align-items: center;
+    }
+
+    &.items-end {
+        align-items: flex-end;
+    }
+
+    &.items-start {
+        align-items: flex-start;
+    }
+
+    &.center {
+        justify-content: center;
+    }
+
+    &.end {
+        justify-content: flex-end;
+    }
+
+    &.start {
+        justify-content: flex-start;
+    }
+
+    &.space {
+        justify-content: space-between;
+    }
+
+    &.wrap {
+        flex-wrap: wrap;
+    }
+
+    @media screen and (min-width: 769px) {
+        &.lg\:row {
+            flex-direction: row;
+
+            &.rev {
+                flex-direction: row-reverse;
+            }
+        }
+
+        &.lg\:col {
+            flex-direction: column;
+
+            &.rev {
+                flex-direction: column-reverse;
+            }
+        }
+    }
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.flex-0 {
+    flex: 0;
+}
+
+.self-center {
+    align-self: center;
+}

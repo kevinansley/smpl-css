@@ -1,9 +1,18 @@
 {
-  "name": "smpl-css",
+  "name": "@smpl-css/design",
+  "description": "A simple design system leveraging current css technologies.",
   "version": "0.0.1",
   "license": "GPL-3.0",
   "author": {
     "name": "Kevin Johnson",
     "email": "kevinansley@gmail.com"
+  },
+  "main": "dist/index.js",
+  "files": [
+    "dist/**/*.css",
+    "dist/**/*.js"
+  ],
+  "scripts": {
+    "build": "rm -rf dist && mkdir dist && cp -r src/* dist"
   }
 }

@@ -1,4 +1,4 @@
-.accordions {
+.accordion-group {
     width: 100%;
     interpolate-size: allow-keywords;
 
@@ -7,36 +7,44 @@
         position: relative;
         width: 100%;
         display: block;
-        padding: var(--section-padding-y) var(--section-padding-x);
         overflow: hidden;
+
+        &::details-content {
+            block-size: 0;
+            transition:
+                block-size 0.2s,
+                content-visibility 1s;
+            transition-behavior: allow-discrete;
+        }
+
+        &[open]::details-content {
+            block-size: auto;
+        }
     }
 
-    details[open]::details-content {
-        block-size: auto;
-    }
+    summary {
+        padding: var(--section-padding-y) var(--section-padding-x);
 
-    details::details-content {
-        block-size: 0;
-        transition:
-            block-size 0.2s,
-            content-visibility 1s;
-        transition-behavior: allow-discrete;
-    }
+        &:hover {
+            background-color: var(--bg-surface-hover);
+        }
 
-    summary+div {
-        padding: 20px;
-    }
+        &::marker,
+        &::-webkit-details-marker {
+            content: '';
+            display: none;
+        }
 
-    summary::marker,
-    summary::-webkit-details-marker {
-        content: '';
-        display: none;
+        &+div {
+            padding: var(--section-padding-y) var(--section-padding-x);
+        }
     }
 
     summary::after {
-        content: "\2303";
+        font-family: var(--icon-font) !important;
+        content: '\e313';
         position: absolute;
-        margin: var(--section-padding-y);
+        margin: var(--section-padding-y) var(--section-padding-x);
         top: 0;
         right: 0;
         display: inline-block;
@@ -45,11 +53,18 @@
     }
 
     details[open]>summary::after {
-        top: 0.25em;
         transform: rotate(0);
     }
 
-    details.no-content>summary::after {
-        opacity: 0;
+
+    &.left-marker {
+        summary {
+            padding-left: calc(var(--section-padding-x) * 2);
+        }
+
+        summary::after {
+            left: 0;
+            right: auto;
+        }
     }
 }

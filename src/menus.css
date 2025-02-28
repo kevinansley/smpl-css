@@ -16,7 +16,7 @@
         transform: translateY(-20%) scale(0.75);
     }
 
-    &:focus-within [popover] {
+    &:focus-within [popover]:not(:empty) {
         opacity: 1;
         transform: none;
         visibility: visible;

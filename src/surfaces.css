@@ -27,6 +27,22 @@ body {
     border-bottom: 1px solid var(--border-primary);
 }
 
+.elevation-0 {
+    box-shadow: var(--elevation-0);
+}
+
+.elevation-1 {
+    box-shadow: var(--elevation-1);
+}
+
+.elevation-2 {
+    box-shadow: var(--elevation-2);
+}
+
+.elevation-3 {
+    box-shadow: var(--elevation-3);
+}
+
 .appbar {
     position: sticky;
     display: flex;

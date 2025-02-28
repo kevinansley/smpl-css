@@ -1,0 +1,58 @@
+/** Grid Utilities **/
+.grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 0.5rem;
+}
+
+.gap-sm {
+    gap: 0.25rem;
+}
+
+.gap-md {
+    gap: 0.5rem;
+}
+
+.gap-lg {
+    gap: 1rem;
+}
+
+.gap-xl {
+    gap: 2rem;
+}
+
+.col-12 {
+    grid-column: span 12;
+}
+
+.col-6 {
+    grid-column: span 6;
+}
+
+.col-4 {
+    grid-column: span 4;
+}
+
+.col-3 {
+    grid-column: span 3;
+}
+
+@media screen and (min-width: 769px) {
+
+    .lg\:col-12 {
+        grid-column: span 12;
+    }
+
+    .lg\:col-6 {
+        grid-column: span 6;
+    }
+
+    .lg\:col-4 {
+        grid-column: span 4;
+    }
+
+    .lg\:col-3 {
+        grid-column: span 3;
+    }
+
+}

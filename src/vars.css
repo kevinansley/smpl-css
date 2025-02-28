@@ -8,6 +8,8 @@
     --border-primary: #d2d2d2;
     --text-primary: #000;
     --text-contrast: #fff;
+    --text-light: #fff;
+    --text-dark: #000;
 
     --hover-grow-scale: 1.01;
     --transition-interaction: 0.15s;
