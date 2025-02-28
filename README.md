@@ -123,13 +123,13 @@ Base Example
 > [!NOTE]
 > Elevation options should be used sparingly. If you are applying this everywhere, consider updating your --paper-shadow css variable.
 
-> | Options     | Usage                             |
-> | ----------- | --------------------------------- |
-> | Elevation 0 | `<div class="paper elevation-0">` |
-> | Elevation 1 | `<div class="paper elevation-1">` |
-> | Elevation 2 | `<div class="paper elevation-2">` |
-> | Elevation 3 | `<div class="paper elevation-3">` |
-> | Bordered    | `<div class="paper border">`      |
+| Options     | Usage                             |
+| ----------- | --------------------------------- |
+| Elevation 0 | `<div class="paper elevation-0">` |
+| Elevation 1 | `<div class="paper elevation-1">` |
+| Elevation 2 | `<div class="paper elevation-2">` |
+| Elevation 3 | `<div class="paper elevation-3">` |
+| Bordered    | `<div class="paper border">`      |
 
 ### Card
 
@@ -142,13 +142,13 @@ Base Example
 > [!NOTE]
 > Elevation options should be used sparingly. If you are applying this everywhere, consider updating your --paper-shadow css variable.
 
-> | Options     | Usage                            |
-> | ----------- | -------------------------------- |
-> | Elevation 0 | `<div class="card elevation-0">` |
-> | Elevation 1 | `<div class="card elevation-1">` |
-> | Elevation 2 | `<div class="card elevation-2">` |
-> | Elevation 3 | `<div class="card elevation-3">` |
-> | Bordered    | `<div class="card border">`      |
+| Options     | Usage                            |
+| ----------- | -------------------------------- |
+| Elevation 0 | `<div class="card elevation-0">` |
+| Elevation 1 | `<div class="card elevation-1">` |
+| Elevation 2 | `<div class="card elevation-2">` |
+| Elevation 3 | `<div class="card elevation-3">` |
+| Bordered    | `<div class="card border">`      |
 
 ## Component Examples
 
