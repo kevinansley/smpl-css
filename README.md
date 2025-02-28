@@ -90,6 +90,13 @@ You can opt-in to use a very small amount (&lt; 0.4kb) of javascript to have:
 | [Flex](#Flex) | lightweight utility classes for CSS FlexBox |
 | [Grid](#Grid) | lightweight utility classes for CSS Grid    |
 
+### Customization
+
+| Name                                | Description                                         |
+| ----------------------------------- | --------------------------------------------------- |
+| [Theming](#customize-design-tokens) | Creating your own theme by overriding design tokens |
+| [Dark Mode](#dark-mode)             | How to implement dark mode                          |
+
 ## Surface Examples
 
 ### AppBar
@@ -386,3 +393,101 @@ some classes leverage a common breakpoint for large screens.
 | `lg:col-6`  | grid-column: span 6 (min-width: 769px)                             |
 | `lg:col-4`  | grid-column: span 4 (min-width: 769px)                             |
 | `lg:col-3`  | grid-column: span 3 (min-width: 769px)                             |
+
+## Customize Design Tokens
+
+A full list of overridable design tokens, with default values included.
+
+Just place this into your application's initial css file, and the tokens are available anywhere.
+
+```css
+:root {
+  /** Backgrounds **/
+  --bg-main: #fafafa;
+  --bg-surface: #ffffff;
+  --bg-surface-hover: #e2e2e2;
+  --bg-light: #fff;
+
+  --border-primary: #d2d2d2;
+  --text-primary: #000;
+  --text-contrast: #fff;
+  --text-light: #fff;
+  --text-dark: #000;
+
+  --hover-grow-scale: 1.01;
+  --transition-interaction: 0.15s;
+  --transition-standard: 0.35s;
+  --transition-ripple: 0.75s;
+
+  --elevation-0: 0px 1px 2px 0px rgba(0, 0, 0, 0.5);
+  --elevation-1: 0px 2px 5px -1px rgba(0, 0, 0, 0.25);
+  --elevation-2: 0px 4px 10px -2px rgba(0, 0, 0, 0.35);
+  --elevation-3: 0px 6px 15px -5px rgba(0, 0, 0, 0.45);
+
+  /* Surfaces */
+  --section-radius: 8px;
+  --section-border-width: 0;
+  --section-padding-x: 16px;
+  --section-padding-y: 16px;
+
+  --paper-shadow: var(--elevation-1);
+  --paper-margin-bottom: 8px;
+
+  --appbar-floating-margin-x: 0.5rem;
+  --appbar-floating-margin-y: 0.5rem;
+
+  /** Tab Specific **/
+  --tab-padding-x: 24px;
+  --tab-padding-y: 8px;
+  --tab-border-width: 2px;
+  --tab-border-color: var(--border-primary);
+
+  /* Elements are inputs, buttons, checkboxes, tabs, etc.*/
+  --element-radius: 8px;
+  --element-elevation: 0px 1px 2px 0px rgba(0, 0, 0, 0.5);
+  --element-primary: #3030ce;
+  --element-hover: #2020a0;
+  --element-highlight: #e9e9e9;
+  --element-inactive: #888;
+  --element-shadow: var(--elevation-1);
+  --element-font-size: 1rem;
+
+  /* Chips */
+  --chip-radius: 16px;
+  --chip-padding-x: 8px;
+  --chip-padding-y: 4px;
+  --chip-border: #888;
+
+  /** Fab **/
+  --fab-border-radius: 50rem;
+  --fab-padding-x: 16px;
+  --fab-padding-y: 16px;
+
+  /* Text Field Specific */
+  --input-container-padding-x: 0;
+  --input-container-padding-y: 8px;
+  --input-padding-x: 8px;
+  --input-padding-y: 4px;
+  --input-border: #888;
+
+  /* Icons */
+  --icon-font: "Material Icons";
+  --icon: #888;
+
+  /* Emphasis Colors */
+  --emphasis-info: blue;
+  --emphasis-positive: green;
+  --emphasis-negative: red;
+  --emphasis-warning: orange;
+}
+```
+
+### Dark Mode
+
+Although SMPL-CSS doesn't come packaged with a dark mode, you can create your own Dark Mode by overriding current design tokens:
+
+```css
+[data-theme="dark"] {
+  /* color-specific design tokens */
+}
+```
