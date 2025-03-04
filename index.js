@@ -3,7 +3,7 @@ document.addEventListener("mousedown", (e) => {
   const style = window.getComputedStyle(target);
   const x = style.getPropertyValue("--ripple-x");
   const y = style.getPropertyValue("--ripple-y");
-  if (x !== undefined && y !== undefined) {
+  if (x && y) {
     const targetPos = target.getBoundingClientRect();
     target.style.setProperty("--ripple-x", `calc(${e.clientX - targetPos.left}px - 5%)`);
     target.style.setProperty("--ripple-y", `calc(${e.clientY - targetPos.top}px - 50%)`);

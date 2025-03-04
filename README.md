@@ -282,6 +282,44 @@ Base Example:
 | Icon Before Text | `<span data-icon="icon_name">Text</span>` |
 | Icon After Text  | `<span data-icon="icon_name">Text</span>` |
 
+### Menus
+
+Menus are meant to build things like dropdowns, auto-completes, etc.
+It supports viewport awareness out of the box. For menus to work properly,
+they require a focusable element within them, such as a button, input, etc.
+
+Additionally, the popup should include a tab-index, in order to keep focus.
+If you wish to close on click, you will need to call the "blur" function, something like:
+`document.activeElement.blur();` or `e.target.closest("[popover]").blur();`
+
+Base Example:
+
+```html
+<div class="menu">
+  <button>Click Me For A Popup</button>
+  <div popover="manual" tabindex="0">
+    <p>Some Popup Content</p>
+    <p>Additional Content</p>
+  </div>
+</div>
+```
+
+you can add your own css and implement how you wish to interact with the content, cursor, etc.
+
+Here's suggested styling for options:
+
+```css
+.menu [popover] .option {
+  cursor: pointer;
+  white-space: nowrap;
+  padding: 0.5rem;
+  margin: 0;
+  &:hover {
+    background-color: var(--bg-surface-hover);
+  }
+}
+```
+
 ### Radio Buttons
 
 Base Example:
@@ -312,7 +350,7 @@ Base Example:
 | ------- | --- |
 | None    |     |
 
-### Text Field
+### Text Fields
 
 Base Examples:
 
@@ -331,7 +369,7 @@ Base Examples:
 | Standard | input is underlined `<fieldset class="text-field outlined">...`                |
 | Simple   | legend is static, above the input: `<fieldset class="text-field outlined">...` |
 
-### Toggle
+### Toggles
 
 ```html
 <label><input type="checkbox" class="toggle" />My Toggle</label>

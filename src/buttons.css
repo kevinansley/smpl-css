@@ -37,16 +37,22 @@ button.outlined,
 }
 
 button.icon,
-button.icon:hover {
+.btn.icon {
     background-color: transparent;
     color: var(--element-primary);
     box-shadow: none;
     border: 0;
     min-width: 2rem;
     min-height: 2rem;
-    padding: var(--padding-sm);
+    padding: 0.25rem;
     border-radius: 50rem;
-    --ripple-color: var(--element-primary)
+    display: grid;
+    place-items: center;
+    --ripple-color: var(--element-primary);
+
+    &:hover {
+        background-color: var(--bg-surface-hover);
+    }
 }
 
 .fab {
