@@ -1,12 +1,15 @@
 :root {
     /** Backgrounds **/
     --bg-main: #fafafa;
+    --bg-hover: #f0f0f0;
     --bg-surface: #ffffff;
     --bg-surface-hover: #e2e2e2;
     --bg-light: #fff;
 
     --border-primary: #d2d2d2;
+    --border-interactive: #3030ce;
     --text-primary: #000;
+    --text-secondary: #888;
     --text-contrast: #fff;
     --text-light: #fff;
     --text-dark: #000;
@@ -38,6 +41,7 @@
     --tab-padding-y: 8px;
     --tab-border-width: 2px;
     --tab-border-color: var(--border-primary);
+    --tab-radius: 0;
 
     /* Elements are inputs, buttons, checkboxes, tabs, etc.*/
     --element-radius: 8px;
